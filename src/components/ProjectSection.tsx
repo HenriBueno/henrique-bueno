@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
+import milleniumCardsImage from "../assets/img/milleniumCards.png"
+import apiYuGiOhImage from "../assets/img/yugiohApi.png"
+import rickAndMortyImage from "../assets/img/rickandMorty.png"
 
 const PROJECTS = [
   {
@@ -7,7 +10,7 @@ const PROJECTS = [
     description:
       "E-commerce Full Stack para comercialização de cards colecionáveis com Redux Toolkit, autenticação, gerenciamento de produtos e consumo de APIs REST.",
     tags: ["React", "TypeScript", "Redux Toolkit", "Tailwind CSS", "Node.js"],
-    image: "src/assets/img/milleniumCards.png",
+    image: milleniumCardsImage,
     link: "https://github.com/HenriBueno/millennium_cards",
     fileName: "cardListSlice .ts",
     codeSnippet: `const cardListSlice  = createSlice({
@@ -31,7 +34,7 @@ const PROJECTS = [
     description:
       "Aplicação que consome a API pública de Yu-Gi-Oh, listando cartas com filtros e detalhes. Projeto focado em consumo de APIs REST e manipulação de dados.",
     tags: ["JavaScript", "CSS", "APIs REST"],
-    image: "src/assets/img/yugiohApi.png",
+    image: apiYuGiOhImage,
     link: "https://github.com/HenriBueno/api-yugioh",
     fileName: "script.js",
     codeSnippet: `
@@ -51,7 +54,7 @@ const PROJECTS = [
     description:
       "Aplicação de listagem de personagens da série Rick and Morty com filtros por status e espécie, consumindo a API pública da franquia.",
     tags: ["JavaScript", "HTML", "CSS", "APIs REST"],
-    image: "src/assets/img/rickandMorty.png",
+    image: rickAndMortyImage,
     link: "https://github.com/HenriBueno/projeto-Rick-and-Morty",
     fileName: "script.js",
     codeSnippet: `
