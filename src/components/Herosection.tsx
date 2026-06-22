@@ -6,7 +6,7 @@ import ParticleNetwork from "./ParticleNetwork";
 
 export default function HeroSection() {
   const containerRef = useRef<HTMLElement>(null);
-  const [mousePos, setMousePos] = useState<{ x: number; y: number }>({
+  const [, setMousePos] = useState<{ x: number; y: number }>({
     x: 0,
     y: 0,
   });
