@@ -5,7 +5,6 @@ export default function AboutSection() {
     <section id="about" className="relative py-32 px-6 md:px-16 noise-overlay">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          {/* Label */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -18,7 +17,6 @@ export default function AboutSection() {
             </span>
           </motion.div>
 
-          {/* Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +60,7 @@ export default function AboutSection() {
               </div>
               <div>
                 <span className="text-5xl md:text-6xl font-heading font-black text-foreground">
-                  2
+                  5
                 </span>
                 <p className="font-mono text-xs text-muted-foreground mt-2 tracking-wider">
                   PROJETOS

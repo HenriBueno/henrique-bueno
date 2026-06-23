@@ -85,7 +85,6 @@ export default function TeamCarrossel({
 
   return (
     <div className="w-full">
-      {/* Header */}
       <div className="text-center">
         <h3 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
           Minha <span className="text-cobalt">Equipe</span>

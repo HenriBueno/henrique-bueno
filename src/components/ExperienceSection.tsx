@@ -49,7 +49,6 @@ export default function ExperienceSection() {
       className="relative py-32 px-6 md:px-16 noise-overlay"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Section Label */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -65,9 +64,7 @@ export default function ExperienceSection() {
           </h2>
         </motion.div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div className="absolute left-0 md:left-8 top-0 bottom-0 w-[1px] bg-gradient-to-b from-cobalt via-white/10 to-transparent" />
 
           <div className="space-y-20">
@@ -80,10 +77,8 @@ export default function ExperienceSection() {
                 transition={{ duration: 0.8, delay: i * 0.1 }}
                 className="relative pl-12 md:pl-24"
               >
-                {/* Timeline dot */}
                 <div className="absolute left-0 md:left-8 top-2 w-2 h-2 rounded-full bg-cobalt -translate-x-[3.5px]" />
 
-                {/* Background year */}
                 <span className="absolute -left-4 md:left-12 top-0 text-[8rem] font-heading font-black text-white/[0.02] leading-none select-none pointer-events-none">
                   {exp.year}
                 </span>
@@ -105,7 +100,6 @@ export default function ExperienceSection() {
                     {exp.description}
                   </p>
 
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2 mt-6">
                     {exp.tags.map((tag) => (
                       <span

@@ -30,7 +30,7 @@ export default function ParticleNetwork({
       45,
       container.clientWidth / container.clientHeight,
       1,
-      4000
+      4000,
     );
     camera.position.z = 1750;
 
@@ -38,7 +38,8 @@ export default function ParticleNetwork({
     const group = new THREE.Group();
     scene.add(group);
 
-    const particlesData: { velocity: THREE.Vector3; numConnections: number }[] = [];
+    const particlesData: { velocity: THREE.Vector3; numConnections: number }[] =
+      [];
     const particlePositions = new Float32Array(maxParticleCount * 3);
     const segments = maxParticleCount * maxParticleCount;
     const positions = new Float32Array(segments * 3);
@@ -54,7 +55,7 @@ export default function ParticleNetwork({
         velocity: new THREE.Vector3(
           -1 + Math.random() * 2,
           -1 + Math.random() * 2,
-          -1 + Math.random() * 2
+          -1 + Math.random() * 2,
         ),
         numConnections: 0,
       });
@@ -63,7 +64,9 @@ export default function ParticleNetwork({
     particles.setDrawRange(0, particleCount);
     particles.setAttribute(
       "position",
-      new THREE.BufferAttribute(particlePositions, 3).setUsage(THREE.DynamicDrawUsage)
+      new THREE.BufferAttribute(particlePositions, 3).setUsage(
+        THREE.DynamicDrawUsage,
+      ),
     );
 
     const pointCloud = new THREE.Points(
@@ -74,18 +77,18 @@ export default function ParticleNetwork({
         blending: THREE.AdditiveBlending,
         transparent: true,
         sizeAttenuation: false,
-      })
+      }),
     );
     group.add(pointCloud);
 
     const lineGeometry = new THREE.BufferGeometry();
     lineGeometry.setAttribute(
       "position",
-      new THREE.BufferAttribute(positions, 3).setUsage(THREE.DynamicDrawUsage)
+      new THREE.BufferAttribute(positions, 3).setUsage(THREE.DynamicDrawUsage),
     );
     lineGeometry.setAttribute(
       "color",
-      new THREE.BufferAttribute(colors, 3).setUsage(THREE.DynamicDrawUsage)
+      new THREE.BufferAttribute(colors, 3).setUsage(THREE.DynamicDrawUsage),
     );
     lineGeometry.setDrawRange(0, 0);
 
@@ -95,7 +98,7 @@ export default function ParticleNetwork({
         vertexColors: true,
         blending: THREE.AdditiveBlending,
         transparent: true,
-      })
+      }),
     );
     group.add(linesMesh);
 
@@ -105,7 +108,6 @@ export default function ParticleNetwork({
     renderer.setClearColor(0x000000, 0);
     container.appendChild(renderer.domElement);
 
-    // --- orbit controls ---
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
@@ -129,7 +131,8 @@ export default function ParticleNetwork({
       let colorpos = 0;
       let numConnected = 0;
 
-      for (let i = 0; i < particleCount; i++) particlesData[i].numConnections = 0;
+      for (let i = 0; i < particleCount; i++)
+        particlesData[i].numConnections = 0;
 
       for (let i = 0; i < particleCount; i++) {
         const pd = particlesData[i];
@@ -137,17 +140,28 @@ export default function ParticleNetwork({
         particlePositions[i * 3 + 1] += pd.velocity.y;
         particlePositions[i * 3 + 2] += pd.velocity.z;
 
-        if (particlePositions[i * 3 + 1] < -rHalf || particlePositions[i * 3 + 1] > rHalf)
+        if (
+          particlePositions[i * 3 + 1] < -rHalf ||
+          particlePositions[i * 3 + 1] > rHalf
+        )
           pd.velocity.y *= -1;
-        if (particlePositions[i * 3] < -rHalf || particlePositions[i * 3] > rHalf)
+        if (
+          particlePositions[i * 3] < -rHalf ||
+          particlePositions[i * 3] > rHalf
+        )
           pd.velocity.x *= -1;
-        if (particlePositions[i * 3 + 2] < -rHalf || particlePositions[i * 3 + 2] > rHalf)
+        if (
+          particlePositions[i * 3 + 2] < -rHalf ||
+          particlePositions[i * 3 + 2] > rHalf
+        )
           pd.velocity.z *= -1;
 
         for (let j = i + 1; j < particleCount; j++) {
           const dx = particlePositions[i * 3] - particlePositions[j * 3];
-          const dy = particlePositions[i * 3 + 1] - particlePositions[j * 3 + 1];
-          const dz = particlePositions[i * 3 + 2] - particlePositions[j * 3 + 2];
+          const dy =
+            particlePositions[i * 3 + 1] - particlePositions[j * 3 + 1];
+          const dz =
+            particlePositions[i * 3 + 2] - particlePositions[j * 3 + 2];
           const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
 
           if (dist < minDistance) {
@@ -179,7 +193,7 @@ export default function ParticleNetwork({
       linesMesh.geometry.attributes.color.needsUpdate = true;
       pointCloud.geometry.attributes.position.needsUpdate = true;
 
-      controls.update(); // necessário para o damping funcionar
+      controls.update();
       renderer.render(scene, camera);
     };
 

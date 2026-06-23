@@ -10,7 +10,7 @@ export default function ScrollProgress() {
       setProgress(docHeight > 0 ? (scrollTop / docHeight) * 100 : 0);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // chama uma vez ao montar
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 

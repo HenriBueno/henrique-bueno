@@ -48,7 +48,6 @@ export default function StackSection() {
               transition={{ duration: 0.5, delay: i * 0.05 }}
               className="bg-obsidian p-6 md:p-8 group hover:bg-cobalt/5 transition-all duration-500 relative overflow-hidden"
             >
-              {/* Hover accent line */}
               <div className="absolute top-0 left-0 w-full h-[2px] bg-cobalt scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
               <span className="font-mono text-[10px] text-muted-foreground tracking-[0.2em] uppercase">

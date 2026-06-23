@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import milleniumCardsImage from "../assets/img/milleniumCards.png"
-import apiYuGiOhImage from "../assets/img/yugiohApi.png"
-import rickAndMortyImage from "../assets/img/rickandMorty.png"
+import milleniumCardsImage from "../assets/img/milleniumCards.png";
+import apiYuGiOhImage from "../assets/img/yugiohApi.png";
+import rickAndMortyImage from "../assets/img/rickandMorty.png";
 
 const PROJECTS = [
   {
@@ -81,7 +81,6 @@ export default function ProjectsSection() {
       className="relative py-32 px-6 md:px-16 noise-overlay"
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -111,7 +110,6 @@ export default function ProjectsSection() {
           </motion.a>
         </div>
 
-        {/* Cards */}
         <div className="space-y-8">
           {PROJECTS.map((project, index) => (
             <motion.div
@@ -123,9 +121,7 @@ export default function ProjectsSection() {
               className="group relative"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 border border-white/5 bg-card/50 hover:border-cobalt/20 transition-all duration-500">
-                {/* Coluna esquerda: imagem + tags */}
                 <div className="lg:col-span-7 flex flex-col">
-                  {/* Imagem — overflow-hidden só aqui */}
                   <div className="relative h-64 md:h-80 lg:h-96 overflow-hidden">
                     <img
                       src={project.image}
@@ -135,7 +131,6 @@ export default function ProjectsSection() {
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent to-obsidian/80" />
                   </div>
 
-                  {/* Tags abaixo da imagem */}
                   <div className="flex flex-wrap gap-2 px-4 py-3 border-t border-white/5">
                     {project.tags.map((tag) => (
                       <span
@@ -148,7 +143,6 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* Coluna direita: info */}
                 <div className="lg:col-span-5 p-8 md:p-10 flex flex-col justify-between relative border-t lg:border-t-0 lg:border-l border-white/5">
                   <div>
                     <span className="font-mono text-xs text-muted-foreground tracking-[0.3em]">
@@ -162,7 +156,6 @@ export default function ProjectsSection() {
                     </p>
                   </div>
 
-                  {/* Code Peek */}
                   <div className="mt-6 bg-obsidian/80 border border-white/5 p-4 rounded-sm overflow-hidden">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="w-2 h-2 rounded-full bg-red-500/60" />

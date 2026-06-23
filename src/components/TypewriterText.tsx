@@ -4,9 +4,9 @@ import { useEffect, useState, useRef } from "react";
 interface TypewriterTextProps {
   text: string;
   words?: string[];
-  typeSpeed?: number; // velocidade de digitar em ms por letra
-  deleteSpeed?: number; // velocidade de apagar em ms por letra
-  wordDelay?: number; // tempo que cada palavra fica parada antes de apagar
+  typeSpeed?: number;
+  deleteSpeed?: number;
+  wordDelay?: number;
   loop?: boolean;
   className?: string;
   restartTrigger?: number;
@@ -43,7 +43,6 @@ export default function TypewriterText({
           i++;
           timeoutRef.current = setTimeout(type, typeSpeed);
         } else {
-          // palavra completa — aguarda wordDelay antes de apagar
           timeoutRef.current = setTimeout(
             () => deleteWord(word, onDone),
             wordDelay,
@@ -74,7 +73,6 @@ export default function TypewriterText({
       const isLast = indexRef.current === sequence.length - 1;
 
       if (isLast) {
-        // última palavra — digita, aguarda e reinicia se loop
         const word = sequence[indexRef.current];
         let i = 0;
 
@@ -91,7 +89,6 @@ export default function TypewriterText({
               });
             }, wordDelay);
           }
-          // se loop=false, para aqui com a palavra completa
         };
 
         type();

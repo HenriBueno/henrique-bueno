@@ -21,7 +21,6 @@ function Home() {
       <StackSection />
       <CertificationsSection />
       <ContactSection />
-
       <Footer />
     </>
   );

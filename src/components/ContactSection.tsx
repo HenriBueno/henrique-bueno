@@ -159,7 +159,6 @@ export default function ContactSection() {
         </div>
       </div>
 
-      {/* Full-screen contact overlay */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

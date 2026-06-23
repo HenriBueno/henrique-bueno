@@ -8,7 +8,7 @@ interface ScrambleTextProps {
   duration?: number;
   scrambleDuration?: number;
   loop?: boolean;
-  wordDelay?: number;   // tempo que cada palavra fica parada antes de trocar
+  wordDelay?: number; 
   className?: string;
 }
 
@@ -57,7 +57,6 @@ export default function ScrambleText({
 
       if (resolved.every(Boolean)) {
         clearInterval(intervalRef.current!);
-        // todas as palavras aguardam o mesmo wordDelay antes de trocar
         timeoutRef.current = setTimeout(onDone, wordDelay);
       }
     }, scrambleDuration);

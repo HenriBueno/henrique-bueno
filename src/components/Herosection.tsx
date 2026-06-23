@@ -42,7 +42,6 @@ export default function HeroSection() {
       ref={containerRef}
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
     >
-      {/* Background shape grid */}
       <div className="absolute inset-0 w-full h-full z-0">
         <ShapeGrid
           speed={0.5}
@@ -55,14 +54,13 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Top-left name — HENRIQUE */}
       <motion.div
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
         className="absolute top-6 sm:top-10 md:top-16 lg:top-20 left-4 sm:left-8 md:left-12 lg:left-16 z-10"
       >
-        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black text-outline leading-none tracking-tighter">
+        <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black text-outline leading-none tracking-tighter">
           <ScrambleText
             text="HENRIQUE"
             words={["BUENO"]}
@@ -78,9 +76,9 @@ export default function HeroSection() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-        className="absolute inset-0 z-10 flex items-center justify-center"
+        className="absolute inset-0 z-10 flex items-center justify-center pb-32 sm:items-center sm:pb-0"
       >
-        <div className="relative w-[60vw] h-[60vw] sm:w-[40vw] sm:h-[40vw] md:w-[40vw] md:h-[40vw] lg:w-[35vw] lg:h-[35vw]">
+        <div className="relative w-[85vw] h-[85vw] sm:w-[70vw] sm:h-[70vw] md:w-[40vw] md:h-[40vw] lg:w-[35vw] lg:h-[35vw]">
           <ParticleNetwork
             className="w-full h-full"
             particleCount={200}
@@ -97,7 +95,7 @@ export default function HeroSection() {
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
         className="absolute bottom-36 sm:bottom-28 md:bottom-24 lg:bottom-20 right-4 sm:right-8 md:right-12 lg:right-16 z-10"
       >
-        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black text-outline leading-none tracking-tighter">
+        <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black text-outline leading-none tracking-tighter">
           <ScrambleText
             text="BUENO"
             words={["HENRIQUE"]}
@@ -109,7 +107,6 @@ export default function HeroSection() {
         </h1>
       </motion.div>
 
-      {/* Subtitle */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -135,7 +132,6 @@ export default function HeroSection() {
         </p>
       </motion.div>
 
-      {/* CTA buttons */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -156,7 +152,6 @@ export default function HeroSection() {
         </button>
       </motion.div>
 
-      {/* Scroll indicator — hidden on mobile */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

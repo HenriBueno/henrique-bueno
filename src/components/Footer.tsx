@@ -6,7 +6,7 @@ export default function Footer() {
           © 2026 HENRIQUE BUENO
         </span>
         <span className="font-mono text-xs text-muted-foreground tracking-wider">
-          ESTUDANTE ENGENHARIA DE SOFTWARE · BRASIL
+          ESTUDANTE DE ENGENHARIA DE SOFTWARE · BRASIL
         </span>
       </div>
     </footer>
