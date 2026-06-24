@@ -5,8 +5,9 @@ export default function Footer() {
         <span className="font-mono text-xs text-muted-foreground tracking-wider">
           © 2026 HENRIQUE BUENO
         </span>
-        <span className="font-mono text-xs text-muted-foreground tracking-wider">
-          ESTUDANTE DE ENGENHARIA DE SOFTWARE · BRASIL
+        <span className="font-mono text-xs text-muted-foreground tracking-wider text-center">
+          ESTUDANTE DE ENGENHARIA DE SOFTWARE
+          <span>· BRASIL</span>
         </span>
       </div>
     </footer>

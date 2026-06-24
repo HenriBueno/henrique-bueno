@@ -16,7 +16,7 @@ const STACK = [
   { name: "Motion", category: "Framework", level: "Secundário" },
   { name: "Redux-Toolkit", category: "Framework", level: "Secundário" },
   { name: "styled-components", category: "Framework", level: "Secundário" },
-  { name: "Tailwind CSS", category: "Framework", level: "Secundário" }
+  { name: "Tailwind CSS", category: "Framework", level: "Secundário" },
 ];
 
 export default function StackSection() {
@@ -38,7 +38,7 @@ export default function StackSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[1px] bg-white/5">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-white/5">
           {STACK.map((tech, i) => (
             <motion.div
               key={tech.name}
@@ -46,7 +46,7 @@ export default function StackSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="bg-obsidian p-6 md:p-8 group hover:bg-cobalt/5 transition-all duration-500 relative overflow-hidden"
+              className="bg-obsidian p-6 md:p-8 group hover:bg-cobalt/5 transition-all duration-500 relative overflow-hidden "
             >
               <div className="absolute top-0 left-0 w-full h-[2px] bg-cobalt scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 

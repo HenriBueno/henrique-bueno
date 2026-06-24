@@ -60,7 +60,7 @@ export default function HeroSection() {
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
         className="absolute top-6 sm:top-10 md:top-16 lg:top-20 left-4 sm:left-8 md:left-12 lg:left-16 z-10"
       >
-        <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black text-outline leading-none tracking-tighter">
+        <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-[8rem] font-heading font-black text-outline leading-none tracking-tighter">
           <ScrambleText
             text="HENRIQUE"
             words={["BUENO"]}
@@ -95,7 +95,7 @@ export default function HeroSection() {
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
         className="absolute bottom-36 sm:bottom-28 md:bottom-24 lg:bottom-20 right-4 sm:right-8 md:right-12 lg:right-16 z-10"
       >
-        <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-[10rem] font-heading font-black text-outline leading-none tracking-tighter">
+        <h1 className="text-6xl sm:text-6xl md:text-8xl lg:text-[8rem] font-heading font-black text-outline leading-none tracking-tighter">
           <ScrambleText
             text="BUENO"
             words={["HENRIQUE"]}

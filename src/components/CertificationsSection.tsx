@@ -39,7 +39,7 @@ export default function CertificationsSection() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[1px] bg-white/5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-[1px] bg-white/5">
           {CERTS.map((cert, i) => (
             <motion.div
               key={cert.title}
